@@ -1,3 +1,6 @@
+*.rar
+*.png
+*.jpg
 *.weights
 *.h5
 logs/
