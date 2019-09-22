@@ -1,6 +1,7 @@
 *.rar
 *.png
 *.jpg
+*.tif
 *.weights
 *.h5
 logs/
