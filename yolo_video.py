@@ -13,6 +13,9 @@ def detect_img(yolo):
             continue
         else:
             r_image = yolo.detect_image(image)
+            fname = r_image.filename.split("\\")
+            save_path = "results\\" + fname[len(fname) - 1]
+            r_image.save(save_path)
             r_image.show()
     yolo.close_session()
 
