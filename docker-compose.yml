@@ -1,0 +1,13 @@
+# Use root/example as user/password credentials
+version: '3.7'
+
+services:
+  tensorflow:
+    image: tensorflow/tensorflow:latest-gpu-jupyter  
+    container_name: tensorflow-gpu
+    ports:
+      - "8888:8888"
+    volumes:
+      - ../keras-yolo3/:/tf/keras-yolo3
+    stdin_open: "true"
+    tty: "true"
