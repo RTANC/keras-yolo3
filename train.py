@@ -15,7 +15,7 @@ from yolo3.utils import get_random_data
 
 def _main():
     annotation_path = '2012_train.txt'
-    log_dir = 'logs/012/'
+    log_dir = 'logs/014/'
     classes_path = 'model_data/coco_classes.txt'
     anchors_path = 'model_data/yolo_anchors.txt'
     class_names = get_classes(classes_path)
@@ -30,7 +30,7 @@ def _main():
             freeze_body=2, weights_path='model_data/tiny_yolo_weights.h5')
     else:
         model = create_model(input_shape, anchors, num_classes,
-            freeze_body=2, weights_path='logs/011/trained_weights_final.h5') # make sure you know what you freeze
+            freeze_body=2, weights_path='logs/013/trained_weights_final.h5') # make sure you know what you freeze
 
     logging = TensorBoard(log_dir=log_dir)
     checkpoint = ModelCheckpoint(log_dir + 'ep{epoch:03d}-loss{loss:.3f}-val_loss{val_loss:.3f}.h5',
